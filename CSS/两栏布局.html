@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>两栏布局</title>
+<style>
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+.container {
+  width: 100%;
+  height: 400px;
+  background-color: #bbb;
+}
+.container div {
+  height: 100%;
+}
+/*
+左边定宽，右边自适应
+*/
+.case1 .left {
+  width: 100px;
+  float: left;
+  background-color: #723686;
+}
+.case1 .right {
+  margin-left: 100px;
+  background-color: #266b2a;
+}
+
+.case4 {
+  position: relative;
+}
+.case4 .left {
+  background-color: chocolate;
+  width: 130px;
+  position: absolute;
+  left: 0;
+}
+.case4 .right {
+  background-color: cornflowerblue;
+  position: absolute;
+  left: 130px;
+  width: 100%;
+}
+
+.case2 .left {
+  width: 25vw;
+  float: left;
+  background-color: #723686;
+}
+.case2 .right {
+  overflow: hidden;
+  background-color: #266b2a;
+}
+
+.case3 {
+  display: flex;
+}
+.case3 .left {
+  background-color: aquamarine;
+  width: 20vw;
+}
+.case3 .right {
+  background-color: burlywood;
+  flex: 1;
+}
+</style>
+</head>
+<body>
+  <h1>左边定宽，右边自适应</h1>
+  <h2>1. float+margin</h2>
+  <div class="container case1">
+    <div class="left">左边定宽100px</div>
+    <div class="right">右边自适应</div>
+  </div>
+  <h2>2. absolute</h2>
+  <div class="container case4">
+    <div class="left">左边定宽</div>
+    <div class="right">右边自适应</div>
+  </div>
+
+  <h1>左边不定，右边自适应</h1>
+  <h2>1. BFC(实际也支持左右自适应)</h2>
+  <div class="container case2">
+    <div class="left">左边不定宽</div>
+    <div class="right">右边自适应</div>
+  </div>
+  <h2>2. flex</h2>
+  <div class="container case3">
+    <div class="left">左边不定宽</div>
+    <div class="right">右边自适应</div>
+  </div>
+</body>
+</html>

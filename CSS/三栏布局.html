@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三栏布局</title>
+<style>
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+h2 {
+  word-break: break-all;
+}
+header {
+  height: 100px;
+  background-color: aquamarine;
+}
+footer {
+  height: 100px;
+  background-color: bisque;
+}
+/* 
+ * 圣杯布局
+ */
+.wrapper1{
+  padding: 0 100px;
+  overflow: hidden;
+}
+.wrapper1 .col {
+  position: relative;
+  float: left;
+  height: 500px;
+}
+.wrapper1 .main {
+  background-color: brown;
+  width: 100%;
+}
+.wrapper1 .left {
+  background-color: cadetblue;
+  width: 100px;
+  margin-left: -100%;
+  left: -100px;
+}
+.wrapper1 .right {
+  background-color: chocolate;
+  width: 100px;
+  margin-right: -100px;
+}
+/* 
+ * 双飞翼布局
+ */
+.wrapper2 {
+  padding: 0;
+  overflow: hidden;
+}
+.wrapper2 .col {
+  float: left;
+  height: 500px;
+}
+.wrapper2 .main-wrapper {
+  width: 100%;
+}
+.wrapper2 .main {
+  padding: 0 100px;
+  height: 100%;
+  background-color: darkorange;
+}
+.wrapper2 .left {
+  width: 100px;
+  background-color: cadetblue;
+  margin-left: -100%;
+}
+.wrapper2 .right {
+  width: 100px;
+  margin-left: -100px;
+  background-color: cornflowerblue;
+}
+</style>
+</head>
+<body>
+  <h1>圣杯布局</h1>
+  <h2>
+    在main小于left的时候会撕裂，原因是在浏览器的计算中，
+    wrapper容器除去padding之后的宽度容不下left或right，
+    故将他们放到了下一行
+  </h2>
+  <header>header</header>
+  <div class="wrapper1">
+    <section class="col main">main</section>
+    <aside class="col left">left</aside>
+    <aside class="col right">right</aside>
+  </div>
+  <footer>footer</footer>
+  <h2>双飞翼布局</h2>
+  <header>header</header>
+  <section class="wrapper2">
+    <section class="col main-wrapper">
+      <section class="main">main</section>
+    </section>
+    <aside class="col left">left</aside>
+    <aside class="col right">right</aside>
+  </section>
+  <footer>footer</footer>
+</body>
+</html>

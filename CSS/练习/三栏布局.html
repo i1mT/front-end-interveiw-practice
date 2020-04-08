@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三栏布局练习</title>
+<style>
+body {
+  margin: 0;
+}
+header, footer {
+  height: 100px;
+  background-color: darkorange;
+}
+/* 
+ * 圣杯布局
+ */
+.wrapper1 {
+  padding: 0 100px;
+  overflow: hidden;
+}
+.wrapper1 .col {
+  position: relative;
+  float: left;
+  height: 500px;
+}
+.wrapper1 .main {
+  background-color: salmon;
+  width: 100%;
+}
+.wrapper1 .left {
+  width: 100px;
+  background-color: seagreen;
+  margin-left: -100%;
+  right: 100px;
+}
+.wrapper1 .right {
+  width: 100px;
+  background-color: skyblue;
+  margin-left: -100px;
+  left: 100px;
+}
+/* 
+ * 双飞翼布局
+ */
+.wrapper2 {
+  overflow: hidden;
+}
+.wrapper2 .col {
+  float: left;
+  height: 500px;
+}
+.wrapper2 .main-wrapper {
+  width: 100%;
+}
+.wrapper2 .main {
+  background-color: skyblue;
+  padding: 0 100px;
+  height: 100%;
+}
+.wrapper2 .left {
+  width: 100px;
+  background-color: slateblue;
+  margin-left: -100%;
+}
+.wrapper2 .right {
+  width: 100px;
+  background-color: tomato;
+  margin-left: -100px;
+}
+</style>
+</head>
+<body>
+  <h1>圣杯布局</h1>
+  <header>header</header>
+  <section class="wrapper1">
+    <section class="col main">main</section>
+    <aside class="col left">left</aside>
+    <aside class="col right">right</aside>
+  </section>
+  <footer>footer</footer>
+  <h1>双飞翼布局</h1>
+  <header>header</header>
+  <section class="wrapper2">
+    <section class="col main-wrapper">
+      <section class="main">main</section>
+    </section>
+    <aside class="col left">left</aside>
+    <aside class="col right">right</aside>
+  </section>
+  <footer>footer</footer>
+</body>
+</html>
