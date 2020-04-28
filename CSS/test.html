@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+<style>
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+  .main-wrapper {
+    height: 500px;
+    width: 100%;
+    float:left;
+  }
+  .left, .right {
+    float: left;
+    width: 100px;
+  }
+  .main {
+    padding: 0 100px;
+    height: 100%;
+    width: 100%;
+  }
+  .left {
+    left: -100px;
+    height: 500px;
+    margin-left: -100%;
+    background-color: aquamarine;
+  }
+  .right {
+    left: -100px;
+    height: 500px;
+    background-color: burlywood;
+    margin-left: -100px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="main-wrapper">
+       <section class="main">main</section>
+    </section>
+    <section class="left">left</section>
+    <section class="right">right</section>
+  </div>
+</body>
+</html>

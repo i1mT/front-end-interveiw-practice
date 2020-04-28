@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>水平居中</title>
+<style>
+	/* 方案1: text-align; */
+	.parent {
+		text-align: center;
+	}
+	/* 方案二: margin; */
+	.box {
+		width: 100px;
+		margin: 0 auto;
+	}
+	/* 方案三: fit-content + margin; */
+	.son {
+		width: 200px;
+	}
+	.parent {
+		width: fit-content;
+		margin: 0 auto;
+	}
+	/* 方案四: flex; */
+	.parent {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	/* 方案五: absolute + translate; */
+	.box {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+</style>
+</head>
+<body>
+
+</body>
+</html>

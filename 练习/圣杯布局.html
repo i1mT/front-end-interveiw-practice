@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>圣杯布局</title>
+	<style type="text/css">
+		header, footer {
+			height: 50px;
+			background: #999;
+		}
+		.wrapper {
+			padding: 0 100px;
+			overflow: hidden;
+		}
+		.col {
+			float: left;
+			position: relative;
+		}
+		.main {
+			width: 100%;
+			background: #ccc;
+			height: 200px;
+		}
+		.left {
+			height: 200px;
+			width: 100px;
+			left: -100px;
+			background: red;
+			margin-left: -100%;
+		}
+		.right {
+			height: 200px;
+			width: 100px;
+			right: -100px;
+			background: red;
+			margin-left: -100px;
+		}
+	</style>
+</head>
+<body>
+<header>header</header>
+<section class="wrapper">
+	<section class="col main">
+		main
+	</section>
+	<aside class="col left">
+		left
+	</aside>
+	<aside class="col right">
+		right
+	</aside>
+</section>
+<footer>footer</footer>
+</body>
+</html>
